@@ -1898,6 +1898,9 @@ class YOLO26App(ctk.CTk):
                 "patience": patience_val,
                 "project": project_path,
                 "device": 0 if torch.cuda.is_available() else "cpu",
+                "compile": "max-autotune",
+                "cache": "disk",
+                "amp": "bf16",
             }
 
             selected_classes = self.get_selected_classes()
